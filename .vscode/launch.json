@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "boot-local",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ohhoonim.bootlogging.BootloggingApplication",
+            "projectName": "bootlogging",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "boot-dev",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ohhoonim.bootlogging.BootloggingApplication",
+            "projectName": "bootlogging",
+            "args": " --spring.profiles.active=dev",
+            "envFile": "${workspaceFolder}/.env"
+        },
+
+    ]
+}
