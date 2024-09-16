@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+	<include resource="org/springframework/boot/logging/logback/defaults.xml" />
+
 	<springProfile name="local">
-		<include resource="org/springframework/boot/logging/logback/defaults.xml" />
 		<include resource="org/springframework/boot/logging/logback/console-appender.xml" />
 		<root level="DEBUG">
 			<appender-ref ref="CONSOLE" />
@@ -9,9 +10,8 @@
 	</springProfile>
 
 	<springProfile name="dev">
-		<include resource="org/springframework/boot/logging/logback/defaults.xml" />
 		<include resource="org/springframework/boot/logging/logback/file-appender.xml" />
-		<root level="ERROR">
+		<root level="trace">
 			<appender-ref ref="FILE" />
 		</root>
 	</springProfile>
